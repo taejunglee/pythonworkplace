@@ -17,7 +17,7 @@
 
 import QuantLib as ql
 # Components
-effectiveDate = ql.Date(1,1,2021)
+effectiveDate = ql.Date(1,1,2020)
 maturityDate = ql.Date(28,3,2025)
 tenor = ql.Period(3, ql.Months)
 calendar = ql.SouthKorea()
@@ -34,5 +34,5 @@ ref_date = ql.Date(28,3,2021)
 # functions
 print("Next Payment Date from {} : {}".format(ref_date, schedule.nextDate(ref_date)))
  # nextDate = 입력받은 날짜 바로 다음에 올 이자지급일
-print("Previous Payment Date from {} : {}".format(ref_date, schedule.previous(ref_date)))
+print("Previous Payment Date from {} : {}".format(ref_date, schedule.previousDate(ref_date)))
  # priviousDate = 입력받은 날짜 바로 이전에 있었던 이자지급일
