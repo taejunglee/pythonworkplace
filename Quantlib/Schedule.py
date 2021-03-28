@@ -18,7 +18,7 @@
 import QuantLib as ql
 # Components
 effectiveDate = ql.Date(1,1,2021)
-muturityDate = ql.Date(28,3,2025)
+maturityDate = ql.Date(28,3,2025)
 tenor = ql.Period(3, ql.Months)
 calendar = ql.SouthKorea()
 convention = ql.ModifiedFollowing
@@ -26,7 +26,7 @@ rule = ql.DateGeneration.Backward
 endOfMonth = False
 
 # construction
-schedule = ql.Schedule(effectiveDate,maturityDate,tenor,calendar,convetion,convetion,rule,endOfMonth)
+schedule = ql.Schedule(effectiveDate,maturityDate,tenor,calendar,convention,convention,rule,endOfMonth)
 
 
 ref_date = ql.Date(28,3,2021)
@@ -34,5 +34,5 @@ ref_date = ql.Date(28,3,2021)
 # functions
 print("Next Payment Date from {} : {}".format(ref_date, schedule.nextDate(ref_date)))
  # nextDate = 입력받은 날짜 바로 다음에 올 이자지급일
-print("Previous Payment Date from {} : {}".format(ref_date, schedule.preivous(ref_date)))
+print("Previous Payment Date from {} : {}".format(ref_date, schedule.previous(ref_date)))
  # priviousDate = 입력받은 날짜 바로 이전에 있었던 이자지급일
