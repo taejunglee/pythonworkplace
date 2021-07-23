@@ -4,6 +4,6 @@
 
 
 
-install pyfoloi
+install pyfolio
 
 pip install git+https://github.com/quantopian/pyfolio
